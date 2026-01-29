@@ -1,24 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ItCoin.app
+
+A high-converting cryptocurrency information website for ItCoin - featuring live price tracking, charts, and educational content.
+
+## Features
+
+- 📊 **Live Price Dashboard** - Real-time ItCoin price updates every 60 seconds
+- 📈 **Interactive Charts** - Historical price data with 7D, 30D, 90D, and 1Y views
+- 🎯 **SEO Optimized** - Targeting 25M+ monthly searches for ItCoin keywords
+- 💼 **Binance Affiliate Integration** - Monetized with referral links
+- 📧 **Email Alerts** - Price notification subscription system
+- 📱 **Responsive Design** - Mobile-first, beautiful UI with Tailwind CSS
+
+## Tech Stack
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Data Fetching:** SWR
+- **Charts:** Recharts
+- **Database:** MongoDB Atlas
+- **Icons:** Lucide React
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+- MongoDB Atlas account
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/itcoin.app.git
+cd itcoin.app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `.env.local` and add your MongoDB connection string:
+```env
+MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/itcoin
+```
+
+4. Run the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000)
+
+## Project Structure
+
+```
+itcoin.app/
+├── app/
+│   ├── api/
+│   │   ├── price/          # Live price endpoint
+│   │   ├── chart/          # Historical data endpoint
+│   │   ├── info/           # Coin info endpoint
+│   │   └── subscribe/      # Email subscription endpoint
+│   ├── how-to-buy/         # How to buy guide page
+│   ├── what-is-itcoin/     # Educational page
+│   ├── layout.tsx          # Root layout with SEO
+│   └── page.tsx            # Homepage
+├── components/
+│   ├── PriceWidget.tsx     # Live price display
+│   ├── StatsGrid.tsx       # Market stats grid
+│   ├── PriceChart.tsx      # Interactive chart
+│   └── EmailAlertForm.tsx  # Subscription form
+├── lib/
+│   └── mongodb.ts          # MongoDB connection
+└── public/
+```
+
+## API Endpoints
+
+### GET /api/price
+Returns live ItCoin price data from CoinGecko
+- Price (USD)
+- 24h change
+- Market cap
+- Volume
+
+### GET /api/chart?days=7
+Returns historical price data
+- Query param: `days` (7, 30, 90, 365)
+
+### GET /api/info
+Returns detailed coin information
+- Circulating supply
+- All-time high
+- Market data
+
+### POST /api/subscribe
+Subscribe to email price alerts
+```json
+{
+  "email": "user@example.com"
+}
+```
+
+## Deployment to Vercel
+
+1. Push your code to GitHub
+
+2. Import the project in Vercel:
+   - Visit [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+
+3. Configure environment variables in Vercel:
+   - Add `MONGODB_URI`
+
+4. Deploy!
+
+## SEO Keywords Targeted
+
+- itcoin price
+- buy itcoin
+- what is itcoin
+- itcoin cryptocurrency
+- how to buy itcoin
+- itcoin price prediction
+
+## Binance Affiliate
+
+Referral ID: `876543543`
+All buy buttons link to: `https://accounts.binance.com/register?ref=876543543`
 
 ## Learn More
 
