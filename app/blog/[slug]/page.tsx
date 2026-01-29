@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, ChevronRight, Share2, Twitter, Facebook } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -10,7 +11,7 @@ interface Post {
   readTime: string;
   slug: string;
   category: string;
-  content: JSX.Element;
+  content: React.ReactElement;
 }
 
 const posts: Record<string, Post> = {

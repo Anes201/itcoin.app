@@ -156,7 +156,7 @@ export default function HowToBuy() {
                   <div className="space-y-4 text-gray-700 text-lg">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                      <p>Navigate to "Wallet" → "Fiat and Spot" → "Deposit"</p>
+                      <p>Navigate to Wallet &rarr; Fiat and Spot &rarr; Deposit</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
@@ -164,7 +164,7 @@ export default function HowToBuy() {
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                      <p>Choose Bank Transfer or Credit/Debit Card to fund your wallet</p>
+                      <p>Choose Bank Transfer or Credit&#47;Debit Card to fund your wallet</p>
                     </div>
                   </div>
                 </div>
@@ -189,11 +189,11 @@ export default function HowToBuy() {
                   <div className="space-y-4 text-gray-700 text-lg">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                      <p>Go to "Trade" → "Spot" and search for ITCOIN</p>
+                      <p>Go to Trade &rarr; Spot and search for ITCOIN</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                      <p>Select ITCOIN/USDT or your preferred trading pair</p>
+                      <p>Select ITCOIN&#47;USDT or your preferred trading pair</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
@@ -230,7 +230,7 @@ export default function HowToBuy() {
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <p>
-                      <strong>Hardware Wallet (Ledger/Trezor):</strong> Maximum security for long-term holding
+                      <strong>Hardware Wallet (Ledger&#47;Trezor):</strong> Maximum security for long-term holding
                     </p>
                   </div>
                   <div className="flex items-start gap-2">
@@ -247,7 +247,6 @@ export default function HowToBuy() {
               </div>
             </div>
           </div>
-        </div>
 
         {/* Bottom CTA */}
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl p-8 text-center">
