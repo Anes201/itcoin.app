@@ -10,6 +10,25 @@ export const metadata: Metadata = {
   title: 'Bitcoin.app | Official Bitcoin (BTC) Price & Market Tracker',
   description: 'Stay ahead with live Bitcoin (BTC) price charts, institutional market analysis, and secure trading guides. The definitive source for Bitcoin digital gold.',
   keywords: 'bitcoin, btc price, buy bitcoin, bitcoin news, binance referral, digital gold',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://bitcoin.app'),
+  openGraph: {
+    title: 'Bitcoin.app | Official Bitcoin (BTC) Price & Market Tracker',
+    description: 'Real-time Bitcoin data, whale alerts, and pro trader insights.',
+    type: 'website',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://bitcoin.app',
+    siteName: 'Bitcoin.app',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bitcoin.app | Official Bitcoin (BTC) Price & Market Tracker',
+    description: 'Real-time Bitcoin data, whale alerts, and pro trader insights.',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
 };
 
 export default function RootLayout({
