@@ -39,7 +39,7 @@ export function PriceWidget() {
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg">
-      <h2 className="text-lg font-semibold text-gray-700 mb-2">ItCoin Price</h2>
+      <h2 className="text-lg font-semibold text-gray-700 mb-2">ItCoin Price (Placeholder Data)</h2>
       
       <div className="flex items-baseline gap-4 mb-4">
         <p className="text-5xl font-bold text-gray-900">
@@ -75,7 +75,7 @@ export function PriceWidget() {
       </div>
 
       <p className="text-xs text-gray-500 mt-4">
-        Updated every 60 seconds via CoinGecko
+        📊 Note: Displaying Bitcoin data as placeholder until ItCoin is listed on CoinGecko
       </p>
     </div>
   );

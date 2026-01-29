@@ -1,12 +1,17 @@
 import { MongoClient } from 'mongodb'
 
+// In production, fail fast if MONGODB_URI is not set
+if (process.env.NODE_ENV === 'production' && !process.env.MONGODB_URI) {
+  throw new Error('Invalid/Missing environment variable: "MONGODB_URI" in production')
+}
+
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/itcoin'
 const options = {}
 
 let client: MongoClient
 let clientPromise: Promise<MongoClient>
 
-if (!process.env.MONGODB_URI && process.env.NODE_ENV === 'production') {
+if (!process.env.MONGODB_URI && process.env.NODE_ENV !== 'production') {
   console.warn('Warning: MONGODB_URI environment variable is not set. Using default localhost connection.')
 }
 
